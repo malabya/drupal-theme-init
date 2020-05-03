@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Example template file for a card component. Styling for the component is
+ * added using attach_library(). More info: https://www.drupal.org/node/2456753
+ * This is entirely for demonstration purposes so the fields will render since
+ * they are not packaged with the theme.
+ */
+#}
+{% extends "@<%= theme_name %>/block/block.html.twig" %}
+{% block content %}
+  {{ attach_library("<%= theme_name %>/card") }}
+	<div class="block__card--header">
+		{{ content.field_card_header }}
+	</div>
+	<div class="block__card--content">
+		{{ content.field_card_image }}
+		{{ content.field_card_text }}
+	</div>
+	<div class="block__card--footer">
+		{{ contet.field_card_link }}
+	</div>
+{% endblock %}

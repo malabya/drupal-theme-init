@@ -1,0 +1,30 @@
+/**
+*********************
+* Colors
+********************
+**/
+
+@mixin no-bullet {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+@mixin hide-text {
+  display: block;
+  overflow: hidden;
+  text-indent: -9000px;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}

@@ -1,0 +1,46 @@
+/**
+*********************
+* Variables
+********************
+**/
+
+/* Typography */
+$font-family: "Helvetica Neue", "Helvetica", "Comic Sans", sans-serif;
+$font-family--secondary: Georgia, "Times New Roman", Times, serif;
+$line-height: 1.5;
+$font-weight: 400;
+$font-weight--light: 300;
+$font-weight--medium: 600;
+$font-weight--bold: 800;
+$font-size: 1rem;
+$font-size--s: 0.875rem;
+$font-size--xs: 0.75rem;
+$font-size--l: 1.25rem;
+$font-size--xl: 1.65rem;
+$font-size--xxl: 2rem;
+$font-size--h1: $font-size--xxl;
+$font-size--h2: $font-size--xl;
+$font-size--h3: $font-size--l;
+
+/* Transitions */
+$transition-time: 200ms;
+
+/* Container & spacings */
+$layout-container: 75rem;
+$ckeditor-container: 65rem;
+$space: 1rem;
+$space--xs: 0.25rem;
+$space--s: 0.75rem;
+$space--m: 1.75rem;
+$space--l: 2.5rem;
+$space--xl: 3.5rem;
+$space--xxl: 6rem;
+$space--container-left: $space-m;
+$space--container-right: $space-m;
+
+/** Button spacing **/
+$button--horizontal-padding: $space--m;
+$button--vertical-padding: $space;
+
+/* Border */
+$border: 0.0165rem solid $color--black;

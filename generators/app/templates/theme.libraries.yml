@@ -1,0 +1,31 @@
+# Global style
+global:
+  css:
+    base:
+      //fonts.googleapis.com/css2?family=Open+Sans: {}
+      dist/css/base/base.css: {}
+      dist/css/base/typography.css: {}
+    layout:
+      dist/css/base/layout/layout.css: {}
+    component:
+      dist/css/base/components/components.css: {}
+  js:
+    dist/js/main.js: {}
+
+# Component styling
+card:
+  css:
+    component:
+      dist/css/component/card.css: {}
+
+# Page specific styles
+index:
+  css:
+    theme:
+      dist/css/theme/index.css: {}
+
+# Admin styles
+admin:
+  css:
+    theme:
+      dist/css/admin/admin.css: { preprocess: false }

@@ -1,0 +1,25 @@
+/**
+*********************
+* Example card component style.
+* This is an example to demonstrate component styling and loading components in
+* theme library. Check the libraries.yml file on how the component is loaded.
+* The library will mostly be added using Twig method
+* {{ attach_library('theme/library') }} or maybe using other methods.
+********************
+**/
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../settings/mixin";
+.block__card {
+  background: $color--grey;
+  > .block__card--header {
+    padding: $space;
+  }
+  > .card__content {
+    border-top: $border;
+    border-bottom: $border;
+  }
+  > .card__footer {
+    padding: $space;
+  }
+}

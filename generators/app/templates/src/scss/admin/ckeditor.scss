@@ -1,0 +1,13 @@
+/**
+*********************
+* CKEditor overrides
+********************
+**/
+
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../settings/mixin";
+@import "../base/typography";
+.cke_editable {
+  padding: $space;
+}

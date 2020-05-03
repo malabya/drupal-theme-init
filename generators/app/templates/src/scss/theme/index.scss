@@ -1,0 +1,13 @@
+/**
+*********************
+* Example page theme style.
+* This is an example to demonstrate custom styling for a page or a page type.
+* Most of the component styling should be loaded as per required. However, if
+* any page requires some special style, those should be added to the
+* page-specific SCSS files and the libraries should be loaded separately. The
+* added libraries can either be added using preprocess methods or attaching the
+* library in Twig file using {{ attach_library('theme/library') }} .
+********************
+**/
+@import "../settings/colors";
+@import "../settings/variables";

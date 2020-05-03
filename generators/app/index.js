@@ -5,17 +5,53 @@ const yosay = require('yosay');
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
-    this.log(
-      yosay(`Welcome to the kickass ${chalk.red('generator-drupal-theme-sccaffold')} generator!`)
-    );
-
     const prompts = [
       {
+        name: 'theme_name',
+        message: 'Enter your new theme name',
+        default: _.startCase(this.appname)
+      },
+      {
+        name: 'theme_machine_name',
+        message: 'Enter your theme machine name',
+        default: function (answers) {
+          return _.snakeCase(answers.themeName);
+        }
+      },
+      {
+        name: 'theme_description',
+        message: 'Enter your theme description',
+        default: function () {
+          return 'My awesome theme'
+        }
+      },
+      {
+        name: 'theme_package',
+        message: 'Enter your theme package',
+        default: function () {
+          return 'Custom'
+        }
+      },
+      {
+        type: 'list',
+        name: 'theme_base',
+        message: 'Base theme (i.e. classy, stable)',
+        choices: [
+          {
+            value: 'classy',
+            name: 'Classy'
+          },
+          {
+            value: 'stable',
+            name: 'Stable'
+          }
+        ]
+      },
+      {
         type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
-        default: true
+        name: 'include_bootstrap',
+        message: 'Would you like to include Bootstrap?',
+        default: false,
       }
     ];
 

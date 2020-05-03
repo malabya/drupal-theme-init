@@ -1,0 +1,38 @@
+/**
+*********************
+* Colors
+********************
+**/
+
+/* Brand Colors */
+
+$color--primary: #0d8aee !default;
+$color--secondary: #c00 !default;
+$color--tertiary: #3d3d3d !default;
+// Additional brand colors
+/** Add any additional color supplied in the style guide **/
+
+/* Grayscale colors */
+$color--white: #fff !default;
+$color--white-smoke: #f5f5f5 !default;
+$color--whisper: #eee !default;
+$color--light-grey: #ccc !default;
+$color--grey: #6a6a6a !default;
+$color--dark-grey: #484848 !default;
+$color--black: #0f0f0f !default;
+
+/* Accent colors. Primarily used for buttons */
+$color--accent: $color--primary !default;
+$color--accent-contrast: $color--white !default;
+$color--selected-text: $color--accent-contrast !default;
+$color--selected-bg: $color--secondary !default;
+
+/** Button & Link colors **/
+$color--link: $color--accent;
+$color--link-hover: darken($color--link, 5%);
+$color--menu-link: $color--black;
+
+/* Third party brand colors */
+$color--facebook: #03539e !default;
+$color--twitter: #35ccff !default;
+$color--linkedin: #217bc1 !default;
