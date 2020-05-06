@@ -73,19 +73,27 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath("_theme.info.yml"),
       this.destinationPath(this.props.themeMachineName + ".info.yml"),
-      this.props
+      {
+        themeName: this.props.themeName,
+        themeDescription: this.props.themeDescription,
+        themeMachineName: this.props.themeMachineName,
+        themePackage: this.props.themePackage,
+        themeBase: this.props.themeBase
+      }
     );
 
     this.fs.copyTpl(
       this.templatePath("_theme.theme"),
       this.destinationPath(this.props.themeMachineName + ".theme"),
-      this.props
+      {
+        themeName: this.props.themeName,
+        themeMachineName: this.props.themeMachineName
+      }
     );
 
     this.fs.copyTpl(
       this.templatePath("_theme.libraries.yml"),
-      this.destinationPath(this.props.themeMachineName + ".libraries.yml"),
-      this.props
+      this.destinationPath(this.props.themeMachineName + ".libraries.yml")
     );
 
     // Copy the twig files.
@@ -112,7 +120,10 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath("_package.json"),
       this.destinationPath("package.json"),
-      this.props
+      {
+        themeName: _.camelCase(this.props.themeName),
+        themeDescription: this.props.themeDescription
+      }
     );
   }
 

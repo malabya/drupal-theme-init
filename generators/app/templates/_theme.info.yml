@@ -19,7 +19,7 @@ regions:
 libraries-override:
   core/normalize: false
   # Replace an entire library.
-  # core/drupal.collapse: <%= themeDescription %>/collapse
+  # core/drupal.collapse: <%= themeMachineName %>/collapse
   # Replace an asset with another.
   # views/views.module:
   #   css:
