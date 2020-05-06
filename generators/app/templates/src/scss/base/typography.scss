@@ -20,10 +20,10 @@ h6 {
 a {
   transition: color $transition-time ease-in-out;
   text-decoration: underline;
-  color: $color-link;
+  color: $color--link;
   &:hover,
   &:focus {
-    color: $color-link--hover;
+    color: $color--link-hover;
   }
 }
 p {
