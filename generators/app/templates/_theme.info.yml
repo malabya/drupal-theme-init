@@ -1,13 +1,14 @@
-name: <%= theme_name %>
+name: <%= themeName %>
 type: theme
-description: "<%= theme_description %>"
-package: <%= theme_package %>
+description: "<%= themeDescription %>"
+package: <%= themePackage %>
 core_version_requirement: ^8|^9
 libraries:
-  - <%= theme_name %>/global
+  - <%= themeMachineName %>/global
   # - Add more global libraries here
 ckeditor_stylesheets:
   - dist/css/admin/ckeditor.css
+base theme: <%= themeBase %>
 regions:
   branding: Branding
   navigation: Navigation
@@ -18,7 +19,7 @@ regions:
 libraries-override:
   core/normalize: false
   # Replace an entire library.
-  # core/drupal.collapse: <%= theme_description %>/collapse
+  # core/drupal.collapse: <%= themeDescription %>/collapse
   # Replace an asset with another.
   # views/views.module:
   #   css:

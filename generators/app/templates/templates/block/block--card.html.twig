@@ -7,9 +7,9 @@
  * they are not packaged with the theme.
  */
 #}
-{% extends "@<%= theme_name %>/block/block.html.twig" %}
+{% extends "@<%= themeMachineName %>/block/block.html.twig" %}
 {% block content %}
-  {{ attach_library("<%= theme_name %>/card") }}
+  {{ attach_library("<%= themeMachineName %>/card") }}
 	<div class="block__card--header">
 		{{ content.field_card_header }}
 	</div>

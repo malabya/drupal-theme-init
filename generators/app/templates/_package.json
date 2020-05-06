@@ -1,5 +1,5 @@
 {
-  "name": "<%= theme_name %>",
+  "name": "<%= themeName %>",
   "version": "1.0.0",
   "description": "",
   "main": "Gulpfile.js",

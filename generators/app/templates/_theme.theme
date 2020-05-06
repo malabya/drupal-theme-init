@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the <%= theme_name%> theme.
+ * Functions to support theming in the <%= themeName%> theme.
  */
 
 use Drupal\user\Entity\User;
@@ -11,9 +11,9 @@ use Drupal\user\RoleInterface;
 /**
  * Implements template_preprocess_page().
  */
-function <%= theme_name %>_preprocess_page(&$variables) {
+function <%= themeMachineName %>_preprocess_page(&$variables) {
   // Load the library specific for Admin users.
   if (User::load(\Drupal::currentUser()->id())->hasRole(RoleInterface::AUTHENTICATED_ID)) {
-    $variables['#attached']['library'][] = '<%= theme_name %>/admin';
+    $variables['#attached']['library'][] = '<%= themeMachineName %>/admin';
   }
 }

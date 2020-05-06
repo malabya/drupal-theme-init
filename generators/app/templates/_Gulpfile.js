@@ -1,6 +1,9 @@
 // Initialize modules
-// Importing specific gulp API functions lets us write them below as series() instead of gulp.series()
+// Importing specific gulp API functions lets us write them below as series()
+// instead of gulp.series()
+
 const { src, dest, watch, series, parallel } = require("gulp");
+
 // Importing all the Gulp-related packages we want to use
 const sourcemaps = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
@@ -33,17 +36,17 @@ const bundleName = (file) => {
   file.basename = file.basename.replace('.es6', '');
   file.extname = '.js';
   return file;
- };
+};
 
 // JS Task: Lint and Uglify the JS files and process them.
 function jsTask() {
-  return src([files.jsPath])
+  return src([ files.jsPath ])
     .pipe(babel({
-      presets: [['env', {
+      presets: [ [ 'env', {
         modules: false,
         useBuiltIns: true,
-        targets: { browsers: ["last 2 versions", "> 1%"] },
-      }]],
+        targets: { browsers: [ "last 2 versions", "> 1%" ] },
+      } ] ],
     }))
     .pipe(rename(file => (bundleName(file))))
     .pipe(dest("dist/js"));
@@ -52,7 +55,7 @@ function jsTask() {
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
-  watch([files.scssPath, files.jsPath], series(parallel(scssTask, jsTask)));
+  watch([ files.scssPath, files.jsPath ], series(parallel(scssTask, jsTask)));
 }
 
 // Export a build Gulp task to create a deployment build.
