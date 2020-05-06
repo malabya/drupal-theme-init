@@ -1,5 +1,5 @@
 {
-  "name": "generator-drupal-theme-sccaffold",
+  "name": "generator-drupal-theme-init",
   "version": "0.0.0",
   "description": "A Yeoman generator to scaffold and initialize a Drupal theme.",
   "homepage": "https://github.com/malabya/drupal-theme-generator",

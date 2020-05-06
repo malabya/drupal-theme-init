@@ -9,9 +9,7 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(
-        `Welcome to the badass ${chalk.red("generator-cwf-theme")} generator!`
-      )
+      yosay(`Welcome to the badass ${chalk.red("drupal-theme")} generator!`)
     );
 
     const prompts = [
