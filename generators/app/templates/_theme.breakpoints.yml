@@ -1,0 +1,24 @@
+<%= themeMachineName %>.small:
+  label: small
+  mediaQuery: '(min-width: 36rem)'
+  weight: 0
+  multipliers:
+    - 1x
+<%= themeMachineName %>.medium:
+  label: medium
+  mediaQuery: '(min-width: 48rem)'
+  weight: 1
+  multipliers:
+    - 1x
+<%= themeMachineName %>.large:
+  label: large
+  mediaQuery: '(min-width: 62rem)'
+  weight: 2
+  multipliers:
+    - 1x
+<%= themeMachineName %>.extra_large:
+  label: extra large
+  mediaQuery: '(min-width: 75rem)'
+  weight: 2
+  multipliers:
+    - 1x

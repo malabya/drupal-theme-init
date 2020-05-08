@@ -92,13 +92,31 @@ module.exports = class extends Generator {
     );
 
     this.fs.copyTpl(
+      this.templatePath("_theme.breakpoints.yml"),
+      this.destinationPath(this.props.themeMachineName + ".breakpoints.yml"),
+      {
+        themeMachineName: this.props.themeMachineName
+      }
+    );
+
+    this.fs.copyTpl(
       this.templatePath("_theme.libraries.yml"),
       this.destinationPath(this.props.themeMachineName + ".libraries.yml")
     );
 
+    this.fs.copyTpl(
+      this.templatePath("logo.svg"),
+      this.destinationPath("logo.svg")
+    );
+
+    this.fs.copyTpl(
+      this.templatePath("screenshot.png"),
+      this.destinationPath("screenshot.png")
+    );
+
     // Copy the twig files.
     this.fs.copyTpl(
-      this.templatePath("templates/**/*"),
+      this.templatePath("_templates/**/*"),
       this.destinationPath("templates"),
       this.props,
       { globOptions: { dot: true } }
@@ -106,13 +124,37 @@ module.exports = class extends Generator {
 
     // Copy the SASS & JS files
     this.fs.copyTpl(
-      this.templatePath("src/**/*"),
+      this.templatePath("_src/**/*"),
       this.destinationPath("src"),
       this.props,
       { globOptions: { dot: true } }
     );
 
     // Copy the build files.
+    this.fs.copyTpl(
+      this.templatePath("_gulp-tasks/**/*"),
+      this.destinationPath("gulp-tasks")
+    );
+    this.fs.copyTpl(
+      this.templatePath("editorconfig"),
+      this.destinationPath(".editorconfig")
+    );
+    this.fs.copyTpl(
+      this.templatePath("eslintignore"),
+      this.destinationPath(".eslintignore")
+    );
+    this.fs.copyTpl(
+      this.templatePath("eslintrc"),
+      this.destinationPath(".eslintrc")
+    );
+    this.fs.copyTpl(
+      this.templatePath("prettierrc.js"),
+      this.destinationPath(".prettierrc.js")
+    );
+    this.fs.copyTpl(
+      this.templatePath("stylelintrc"),
+      this.destinationPath(".stylelintrc")
+    );
     this.fs.copyTpl(
       this.templatePath("_Gulpfile.js"),
       this.destinationPath("Gulpfile.js")

@@ -1,7 +1,5 @@
 (($, Drupal) => {
   Drupal.behaviors.behaviorName = {
-    attach(context) {
-
-    }
+    attach() {},
   };
 })(jQuery, Drupal);

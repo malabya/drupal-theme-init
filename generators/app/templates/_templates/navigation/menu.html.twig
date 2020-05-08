@@ -35,10 +35,10 @@
     {% for item in items %}
       {%
         set classes = [
-          'menu-item',
-          item.is_expanded ? 'menu-item--expanded',
-          item.is_collapsed ? 'menu-item--collapsed',
-          item.in_active_trail ? 'menu-item--active-trail',
+          'menu__item',
+          item.is_expanded ? 'menu__item--expanded',
+          item.is_collapsed ? 'menu__item--collapsed',
+          item.in_active_trail ? 'menu__item--active-trail',
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>

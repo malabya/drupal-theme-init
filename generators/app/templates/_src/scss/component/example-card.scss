@@ -10,15 +10,19 @@
 @import "../settings/colors";
 @import "../settings/variables";
 @import "../settings/mixin";
+
 .block__card {
   background: $color--grey;
+
   > .block__card--header {
     padding: $space;
   }
+
   > .card__content {
     border-top: $border;
     border-bottom: $border;
   }
+
   > .card__footer {
     padding: $space;
   }

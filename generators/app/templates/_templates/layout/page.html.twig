@@ -42,21 +42,28 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
-	<header role="banner">
+
+<header role="banner">
+	<div class="container header">
 		{{ page.branding }}
 		{{ page.navigation }}
-	</header>
+	</div>
+</header>
+<div id="main-wrapper" class="container clearfix">
 	{{ page.help }}
-	<main role="main">
-		<a id="main-content" tabindex="-1"></a>
-		<div class="layout-content">
-			{{ page.content }}
-		</div>
-	</main>
-	{% if page.footer %}
-		<footer role="contentinfo">
-			{{ page.footer }}
-		</footer>
+	{% if page.aside %}
+		<aside class="aside" role="complementary">
+			{{ page.sidebar_first }}
+		</aside>
 	{% endif %}
+	<main class="main-content" role="main">
+		{{ page.content }}
+	</main>
 </div>
+{% if page.footer %}
+	<footer role="contentinfo">
+		<div class="container">
+			{{ page.footer }}
+		</div>
+	</footer>
+{% endif %}</div>

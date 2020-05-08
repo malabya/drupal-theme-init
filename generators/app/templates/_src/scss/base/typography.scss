@@ -5,6 +5,7 @@
 **/
 @import "../settings/colors";
 @import "../settings/variables";
+
 h1,
 h2,
 h3,
@@ -17,20 +18,24 @@ h6 {
   font-weight: $font-weight--bold;
   line-height: $line-height;
 }
+
 a {
   transition: color $transition-time ease-in-out;
   text-decoration: underline;
   color: $color--link;
+
   &:hover,
   &:focus {
     color: $color--link-hover;
   }
 }
+
 p {
   margin: 0 auto $space--m auto;
   font-family: $font-family--secondary;
   font-size: $font-size;
   line-height: $line-height;
+
   &:last-child {
     margin-bottom: 0;
   }

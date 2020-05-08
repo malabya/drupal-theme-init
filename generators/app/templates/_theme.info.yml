@@ -1,25 +1,26 @@
-name: <%= themeName %>
+name: Drupal Theme
 type: theme
-description: "<%= themeDescription %>"
-package: <%= themePackage %>
+description: "My awesome theme"
+package: Custom
 core_version_requirement: ^8|^9
 libraries:
-  - <%= themeMachineName %>/global
+  - drupal_theme/global
   # - Add more global libraries here
 ckeditor_stylesheets:
   - dist/css/admin/ckeditor.css
-base theme: <%= themeBase %>
+base theme: classy
 regions:
   branding: Branding
   navigation: Navigation
   header: Header
   help: Help
+  aside: Aside
   content: Content
   footer: Footer
 libraries-override:
   core/normalize: false
   # Replace an entire library.
-  # core/drupal.collapse: <%= themeMachineName %>/collapse
+  # core/drupal.collapse: drupal_theme/collapse
   # Replace an asset with another.
   # views/views.module:
   #   css:

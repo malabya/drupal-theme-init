@@ -4,13 +4,14 @@
 ********************
 **/
 
-
 @import "../settings/colors";
 @import "../settings/variables";
 @import "../settings/mixin";
+
 .dialog-off-canvas-main-canvas {
   position: relative;
 }
+
 body {
   position: relative;
   display: block;
@@ -21,11 +22,12 @@ body {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
-
   -webkit-font-smoothing: antialiased;
 }
+
 * {
   box-sizing: border-box;
+
   &:focus {
     outline-width: 0.0625rem;
     outline-offset: 0.125rem;
