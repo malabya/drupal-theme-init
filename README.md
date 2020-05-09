@@ -1,4 +1,4 @@
-# generator-drupal-theme-sccaffold [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-drupal-theme-sccaffold [![NPM version][npm-image]][npm-url]
 > A Yeoman generator to scaffold and initialize a Drupal theme.
 
 ## Installation
@@ -21,6 +21,6 @@ yo drupal-theme-init
 MIT © [Malabya](https://imalabya.co)
 
 
-[npm-image]: https://badge.fury.io/js/generator-drupal-theme-sccaffold.svg
-[npm-url]: https://npmjs.org/package/generator-drupal-theme-sccaffold
+[npm-image]: https://badge.fury.io/js/generator-drupal-theme-init.svg
+[npm-url]: https://npmjs.org/package/generator-drupal-theme-init
 
