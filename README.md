@@ -1,4 +1,4 @@
-# generator-drupal-theme-sccaffold [![NPM version][npm-image]][npm-url]
+# generator-drupal-theme-init [![NPM version][npm-image]][npm-url]
 > A Yeoman generator to scaffold and initialize a Drupal theme.
 
 ## Installation
