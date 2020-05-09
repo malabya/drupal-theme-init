@@ -23,4 +23,12 @@ describe("generator-drupal-theme-init:app", () => {
       "package.json"
     ]);
   });
+
+  it("creates expected info file", () => {
+    assert.fileContent("drupal.info.yml", "name: Drupal");
+    assert.fileContent("drupal.info.yml", "description: Drupal theme");
+    assert.fileContent("drupal.info.yml", "package: Custom");
+    assert.fileContent("drupal.info.yml", "- drupal/global");
+    assert.fileContent("drupal.info.yml", "base theme: stable");
+  });
 });
