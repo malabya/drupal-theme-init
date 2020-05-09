@@ -1,4 +1,4 @@
-# generator-drupal-theme-init [![NPM version][npm-image]][npm-url]
+# generator-drupal-theme-init [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 > A Yeoman generator to scaffold and initialize a Drupal theme.
 
 ## Installation
@@ -23,4 +23,5 @@ MIT © [Malabya](https://imalabya.co)
 
 [npm-image]: https://badge.fury.io/js/generator-drupal-theme-init.svg
 [npm-url]: https://npmjs.org/package/generator-drupal-theme-init
-
+[travis-image]: https://travis-ci.com/malabya/drupal-theme-init.svg?branch=master
+[travis-url]: https://travis-ci.com/github/malabya/drupal-theme-init
