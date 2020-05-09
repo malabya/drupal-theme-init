@@ -4,10 +4,8 @@
 ********************
 **/
 
-@import "../settings/colors";
-@import "../settings/variables";
-@import "../settings/mixin";
-@import "../base/typography";
+@import "../settings/settings";
+
 .cke_editable {
   padding: $space;
 }

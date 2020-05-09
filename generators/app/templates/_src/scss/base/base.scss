@@ -4,15 +4,16 @@
 ********************
 **/
 
-@import "../settings/colors";
-@import "../settings/variables";
-@import "../settings/mixin";
+@import "../settings/settings";
 
 .dialog-off-canvas-main-canvas {
   position: relative;
 }
 
 body {
+  @include breakpoint(sm) {
+    font-size: $font-size--s;
+  }
   position: relative;
   display: block;
   margin: auto;

@@ -1,0 +1,53 @@
+/**
+*********************
+* Colors
+********************
+**/
+
+@mixin no-bullet {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+@mixin hide-text {
+  display: block;
+  overflow: hidden;
+  text-indent: -9000px;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &::before,
+  &::after {
+    display: table;
+    content: "";
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// Hide elements visually, but keep them available for screen readers.
+@mixin visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+// Allow the element to be focusable when navigated to via the keyboard.
+@mixin focusable {
+  &:active,
+  &:focus {
+    position: static !important;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+  }
+}
