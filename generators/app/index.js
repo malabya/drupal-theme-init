@@ -53,12 +53,6 @@ module.exports = class extends Generator {
             name: "Stable"
           }
         ]
-      },
-      {
-        type: "confirm",
-        name: "includeBootstrap",
-        message: "Would you like to include Bootstrap?",
-        default: false
       }
     ];
 

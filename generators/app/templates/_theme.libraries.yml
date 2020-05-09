@@ -11,6 +11,9 @@ global:
       dist/css/base/components/components.css: {}
   js:
     dist/js/main.js: {}
+  dependencies:
+    - core/jquery
+
 
 # Component styling
 card:
