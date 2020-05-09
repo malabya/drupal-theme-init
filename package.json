@@ -76,6 +76,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "malabya/generator-drupal-theme-sccaffold",
+  "repository": "malabya/drupal-theme-init",
   "license": "MIT"
 }
