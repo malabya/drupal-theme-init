@@ -9,7 +9,11 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the badass ${chalk.red("drupal-theme")} generator!`)
+      yosay(
+        `Welcome to the badass ${chalk.bgBlack.hex("#bada55")(
+          "drupal-theme"
+        )} generator!`
+      )
     );
 
     const prompts = [
@@ -53,6 +57,12 @@ module.exports = class extends Generator {
             name: "Stable"
           }
         ]
+      },
+      {
+        type: "confirm",
+        name: "includeBootstrap",
+        message: "Do you want to include Bootstrap?",
+        default: false
       }
     ];
 
@@ -72,7 +82,8 @@ module.exports = class extends Generator {
         themeDescription: this.props.themeDescription,
         themeMachineName: this.props.themeMachineName,
         themePackage: this.props.themePackage,
-        themeBase: this.props.themeBase
+        themeBase: this.props.themeBase,
+        includeBootstrap: this.props.includeBootstrap
       }
     );
 
@@ -95,7 +106,10 @@ module.exports = class extends Generator {
 
     this.fs.copyTpl(
       this.templatePath("_theme.libraries.yml"),
-      this.destinationPath(this.props.themeMachineName + ".libraries.yml")
+      this.destinationPath(this.props.themeMachineName + ".libraries.yml"),
+      {
+        includeBootstrap: this.props.includeBootstrap
+      }
     );
 
     this.fs.copyTpl(
@@ -158,7 +172,8 @@ module.exports = class extends Generator {
       this.destinationPath("package.json"),
       {
         themeName: _.camelCase(this.props.themeName),
-        themeDescription: this.props.themeDescription
+        themeDescription: this.props.themeDescription,
+        includeBootstrap: this.props.includeBootstrap
       }
     );
   }

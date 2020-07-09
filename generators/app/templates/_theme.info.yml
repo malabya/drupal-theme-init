@@ -5,6 +5,9 @@ package: <%= themePackage %>
 core_version_requirement: ^8|^9
 libraries:
   - <%= themeMachineName %>/global
+  <%_ if (includeBootstrap) { -%>
+  - <%= themeMachineName %>/bootstrap
+  <%_ } -%>
   # - Add more global libraries here
 ckeditor_stylesheets:
   - dist/css/admin/ckeditor.css

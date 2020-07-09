@@ -14,9 +14,11 @@ $breakpoints: (
 @mixin breakpoint($screen, $type: min) {
   @if map_has_key($breakpoints, $screen) {
     $screen: map_get($breakpoints, $screen);
+
     @if $type == max {
       $screen: $screen - 1px;
     }
+
     @media only screen and (#{$type}-width: $screen) {
       @content;
     }

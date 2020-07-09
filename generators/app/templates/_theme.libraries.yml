@@ -32,3 +32,13 @@ admin:
   css:
     theme:
       dist/css/admin/admin.css: { preprocess: false }
+
+<%_ if (includeBootstrap) { -%>
+# Add the Bootstrap assets
+bootstrap:
+  css:
+    theme:
+      ../node_modules/bootstrap/dist/css/bootstrap.min.css: {}
+  js:
+    ../node_modules/bootstrap/dist/js/bootstrap.min.js: {}
+<%_ } -%>
