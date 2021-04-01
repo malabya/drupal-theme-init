@@ -156,12 +156,12 @@ module.exports = class extends Generator {
       this.destinationPath(".eslintrc")
     );
     this.fs.copyTpl(
-      this.templatePath("prettierrc.js"),
-      this.destinationPath(".prettierrc.js")
+      this.templatePath("prettierrc.json"),
+      this.destinationPath(".prettierrc.json")
     );
     this.fs.copyTpl(
-      this.templatePath("stylelintrc"),
-      this.destinationPath(".stylelintrc")
+      this.templatePath("stylelintrc.json"),
+      this.destinationPath(".stylelintrc.json")
     );
     this.fs.copyTpl(
       this.templatePath("_Gulpfile.js"),
