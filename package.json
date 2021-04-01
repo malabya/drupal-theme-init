@@ -1,6 +1,6 @@
 {
   "name": "generator-drupal-theme-init",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A Yeoman generator to scaffold and initialize a Drupal theme.",
   "homepage": "https://github.com/malabya/drupal-theme-init",
   "author": {
