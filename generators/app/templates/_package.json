@@ -9,7 +9,8 @@
     "build:dev": "gulp build --development",
     "build": "gulp build --production",
     "clean": "gulp clean",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "lint:css:fix": "stylelint \"**/*.scss\" --fix"
   },
   "repository": {
     "type": "git",
