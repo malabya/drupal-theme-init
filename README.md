@@ -10,11 +10,9 @@ npm install -g yo
 npm install -g generator-drupal-theme-init
 ```
 
-Then generate your new project:
+## Usage
 
-```bash
-yo drupal-theme-init
-```
+To learn more and get started, see the blog post: https://imalabya.co/drupal-theme-init-generator
 
 ## License
 
