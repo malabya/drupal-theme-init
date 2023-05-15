@@ -4,15 +4,15 @@ const assert = require("yeoman-assert");
 const helpers = require("yeoman-test");
 
 describe("generator-drupal-theme-init:app", () => {
-  beforeAll(() => {
-    return helpers.run(path.join(__dirname, "../generators/app")).withPrompts({
+  beforeAll(() =>
+    helpers.run(path.join(__dirname, "../generators/app")).withPrompts({
       themeName: "Drupal",
       themeMachineName: "drupal",
       themeDescription: "Drupal theme",
       themePackage: "Custom",
-      themeBase: "stable"
-    });
-  });
+      themeBase: "stable",
+    })
+  );
 
   it("creates files", () => {
     assert.file([
@@ -20,7 +20,7 @@ describe("generator-drupal-theme-init:app", () => {
       "drupal.theme",
       "drupal.breakpoints.yml",
       "drupal.libraries.yml",
-      "package.json"
+      "package.json",
     ]);
   });
 

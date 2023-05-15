@@ -2,7 +2,7 @@ name: <%= themeName %>
 type: theme
 description: <%= themeDescription %>
 package: <%= themePackage %>
-core_version_requirement: ^8|^9
+core_version_requirement: ^9|^10
 libraries:
   - <%= themeMachineName %>/global
   <%_ if (includeBootstrap) { -%>

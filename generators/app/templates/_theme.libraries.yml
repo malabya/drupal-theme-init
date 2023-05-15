@@ -2,7 +2,6 @@
 global:
   css:
     base:
-      //fonts.googleapis.com/css2?family=Open+Sans: {}
       dist/css/base/base.css: {}
       dist/css/base/typography.css: {}
     layout:
@@ -11,8 +10,6 @@ global:
       dist/css/base/components/components.css: {}
   js:
     dist/js/main.js: {}
-  dependencies:
-    - core/jquery
 
 
 # Component styling
