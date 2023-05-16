@@ -44,21 +44,6 @@ module.exports = class extends Generator {
         },
       },
       {
-        type: "list",
-        name: "themeBase",
-        message: "Base theme (i.e. classy, stable)",
-        choices: [
-          {
-            value: "classy",
-            name: "Classy",
-          },
-          {
-            value: "stable",
-            name: "Stable",
-          },
-        ],
-      },
-      {
         type: "confirm",
         name: "includeBootstrap",
         message: "Do you want to include Bootstrap?",
@@ -82,7 +67,6 @@ module.exports = class extends Generator {
         themeDescription: this.props.themeDescription,
         themeMachineName: this.props.themeMachineName,
         themePackage: this.props.themePackage,
-        themeBase: this.props.themeBase,
         includeBootstrap: this.props.includeBootstrap,
       }
     );
@@ -175,6 +159,6 @@ module.exports = class extends Generator {
   }
 
   default() {
-    this.env.options.nodePackageManager = 'yarn';
+    this.env.options.nodePackageManager = "yarn";
   }
 };

@@ -10,7 +10,6 @@ describe("generator-drupal-theme-init:app", () => {
       themeMachineName: "drupal",
       themeDescription: "Drupal theme",
       themePackage: "Custom",
-      themeBase: "stable",
     })
   );
 
