@@ -11,7 +11,7 @@ libraries:
   # - Add more global libraries here
 ckeditor_stylesheets:
   - dist/css/admin/ckeditor.css
-base theme: <%= themeBase %>
+base theme: false
 regions:
   branding: Branding
   navigation: Navigation
