@@ -20,28 +20,28 @@ module.exports = class extends Generator {
       {
         name: "themeName",
         message: "Enter your new theme name",
-        default: _.startCase(this.appname)
+        default: _.startCase(this.appname),
       },
       {
         name: "themeMachineName",
         message: "Enter your theme machine name",
-        default: function(answers) {
+        default(answers) {
           return _.snakeCase(answers.themeName);
-        }
+        },
       },
       {
         name: "themeDescription",
         message: "Enter your theme description",
-        default: function() {
+        default() {
           return "My awesome theme";
-        }
+        },
       },
       {
         name: "themePackage",
         message: "Enter your theme package",
-        default: function() {
+        default() {
           return "Custom";
-        }
+        },
       },
       {
         type: "list",
@@ -50,23 +50,23 @@ module.exports = class extends Generator {
         choices: [
           {
             value: "classy",
-            name: "Classy"
+            name: "Classy",
           },
           {
             value: "stable",
-            name: "Stable"
-          }
-        ]
+            name: "Stable",
+          },
+        ],
       },
       {
         type: "confirm",
         name: "includeBootstrap",
         message: "Do you want to include Bootstrap?",
-        default: false
-      }
+        default: false,
+      },
     ];
 
-    return this.prompt(prompts).then(props => {
+    return this.prompt(prompts).then((props) => {
       // To access props later use this.props.someAnswer;
       this.props = props;
     });
@@ -83,7 +83,7 @@ module.exports = class extends Generator {
         themeMachineName: this.props.themeMachineName,
         themePackage: this.props.themePackage,
         themeBase: this.props.themeBase,
-        includeBootstrap: this.props.includeBootstrap
+        includeBootstrap: this.props.includeBootstrap,
       }
     );
 
@@ -92,7 +92,7 @@ module.exports = class extends Generator {
       this.destinationPath(this.props.themeMachineName + ".theme"),
       {
         themeName: this.props.themeName,
-        themeMachineName: this.props.themeMachineName
+        themeMachineName: this.props.themeMachineName,
       }
     );
 
@@ -100,7 +100,7 @@ module.exports = class extends Generator {
       this.templatePath("_theme.breakpoints.yml"),
       this.destinationPath(this.props.themeMachineName + ".breakpoints.yml"),
       {
-        themeMachineName: this.props.themeMachineName
+        themeMachineName: this.props.themeMachineName,
       }
     );
 
@@ -108,7 +108,7 @@ module.exports = class extends Generator {
       this.templatePath("_theme.libraries.yml"),
       this.destinationPath(this.props.themeMachineName + ".libraries.yml"),
       {
-        includeBootstrap: this.props.includeBootstrap
+        includeBootstrap: this.props.includeBootstrap,
       }
     );
 
@@ -140,10 +140,6 @@ module.exports = class extends Generator {
 
     // Copy the build files.
     this.fs.copyTpl(
-      this.templatePath("_gulp-tasks/**/*"),
-      this.destinationPath("gulp-tasks")
-    );
-    this.fs.copyTpl(
       this.templatePath("editorconfig"),
       this.destinationPath(".editorconfig")
     );
@@ -164,8 +160,8 @@ module.exports = class extends Generator {
       this.destinationPath(".stylelintrc.json")
     );
     this.fs.copyTpl(
-      this.templatePath("_Gulpfile.js"),
-      this.destinationPath("Gulpfile.js")
+      this.templatePath("postcssrc.json"),
+      this.destinationPath(".postcssrc.json")
     );
     this.fs.copyTpl(
       this.templatePath("_package.json"),
@@ -173,17 +169,12 @@ module.exports = class extends Generator {
       {
         themeName: _.camelCase(this.props.themeName),
         themeDescription: this.props.themeDescription,
-        includeBootstrap: this.props.includeBootstrap
+        includeBootstrap: this.props.includeBootstrap,
       }
     );
   }
 
-  install() {
-    this.installDependencies({
-      npm: false,
-      bower: false,
-      yarn: true,
-      "yarn build": true
-    });
+  default() {
+    this.env.options.nodePackageManager = 'yarn';
   }
 };

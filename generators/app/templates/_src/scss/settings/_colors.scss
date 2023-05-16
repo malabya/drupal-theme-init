@@ -3,6 +3,7 @@
 * Colors
 ********************
 **/
+@use "sass:color";
 
 /* Brand Colors */
 $color--primary: #0d8aee !default;
@@ -28,7 +29,7 @@ $color--selected-bg: $color--secondary !default;
 
 /** Button & Link colors **/
 $color--link: $color--accent;
-$color--link-hover: darken($color--link, 5%);
+$color--link-hover: color.adjust($color--link, $lightness: -5%);
 $color--menu-link: $color--black;
 
 /* Third party brand colors */

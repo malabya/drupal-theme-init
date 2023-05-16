@@ -5,7 +5,7 @@
 **/
 
 .breadcrumb {
-  @include no-bullet();
+  @include no-bullet;
 
   display: flex;
   flex-flow: row wrap;

@@ -1,0 +1,9 @@
+{
+  "plugins": {
+    "postcss-discard-comments": {},
+    "postcss-preset-env": {
+      "stage": 1
+    },
+    "cssnano": {}
+  }
+}
