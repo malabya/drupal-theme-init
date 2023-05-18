@@ -8,16 +8,17 @@
  */
 #}
 {% extends "@<%= themeMachineName %>/block/block.html.twig" %}
+{% set attributes = attributes.addClass('block-card') %}
 {% block content %}
   {{ attach_library("<%= themeMachineName %>/card") }}
-	<div class="block__card--header">
-		{{ content.field_card_header }}
-	</div>
-	<div class="block__card--content">
-		{{ content.field_card_image }}
-		{{ content.field_card_text }}
-	</div>
-	<div class="block__card--footer">
-		{{ contet.field_card_link }}
-	</div>
+  <div class="block-card__header">
+    {{ content.field_card_header }}
+  </div>
+  <div class="block-card__content">
+    {{ content.field_card_image }}
+    {{ content.field_card_text }}
+  </div>
+  <div class="block-card__footer">
+    {{ content.field_card_link }}
+  </div>
 {% endblock %}
